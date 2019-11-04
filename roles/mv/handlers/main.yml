@@ -1,0 +1,7 @@
+---
+  # clean up files
+  - name: Remove source file
+    file:
+      path: "{{ source }}"
+      state: absent
+    listen: cleanup

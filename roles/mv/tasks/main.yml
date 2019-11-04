@@ -1,0 +1,19 @@
+---
+  # move files in an idempotent way. taken from reddit post about no mv in ansible
+  - name: Check destination file
+    stat:
+      path: "{{ destination }}"
+    register: destfile
+  - name: Check source file
+    stat:
+      path: "{{ source }}"
+    register: srcfile
+
+  - name: Copy source to destination
+    copy:
+      src: "{{ source }}"
+      dest: "{{ destination }}"
+    when:
+      - srcfile.stat.exists == True
+      - destfile.stat.exists == False
+    notify: cleanup

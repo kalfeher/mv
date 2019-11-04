@@ -1,0 +1,4 @@
+---
+  # just source and destination files for now
+  source: "/tmp/tmp.txt"
+  destination: "/tmp/tmp.new"
