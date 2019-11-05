@@ -1,0 +1,10 @@
+---
+  galaxy_info:
+    role_name: mv
+    author: Kal Feher
+    description: Idempotent file move role.
+    min_ansible_version: 2.0
+    license: GPL 3.0
+  #  galaxy_tags: []
+
+  dependancies: []
