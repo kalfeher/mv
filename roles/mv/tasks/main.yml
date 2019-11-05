@@ -1,5 +1,4 @@
 ---
-  # move files in an idempotent way. taken from reddit post about no mv in ansible
   - name: Check destination file
     stat:
       path: "{{ destination }}"
